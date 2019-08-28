@@ -2,7 +2,6 @@
   "name": "@gecks/utility-types",
   "version": "0.1.0",
   "description": "A collection of very useful TypeScript type declarations",
-  "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "files": [
     "lib/"
@@ -11,6 +10,7 @@
     "typecheck:source": "tsc --build src/tsconfig-check.json",
     "typecheck:tests": "tsc --build test",
     "typecheck": "npm run typecheck:source && npm run typecheck:tests",
+    "test": "",
     "lint:source": "eslint src/**",
     "lint:tests": "eslint test/**",
     "lint": "npm run lint:source && npm run lint:tests",
