@@ -2,6 +2,7 @@
   "name": "@gecks/utility-types",
   "version": "0.1.1",
   "description": "A collection of very useful TypeScript type declarations",
+  "main": "./lib/index.d.ts",
   "types": "./lib/index.d.ts",
   "files": [
     "lib/"
