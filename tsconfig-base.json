@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "pretty": true,
+    "lib": ["esnext"],
+    "target": "esnext",
+
+    "moduleResolution": "node",
+
+    "declaration": true,
+    "declarationMap": true,
+    "noEmitOnError": true,
+
+    "strict": true,
+    "skipLibCheck": true,
+    "strictFunctionTypes": false,
+
+    "downlevelIteration": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig-files",
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "declarationMap": false,
+    "outDir": "../lib"
+  },
+  "references": []
+}

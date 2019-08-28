@@ -1,0 +1,40 @@
+{
+  "name": "@gecks/utility-types",
+  "version": "0.0.0",
+  "description": "A collection of very useful TypeScript type declarations",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "typecheck:source": "tsc --build src/tsconfig-check.json",
+    "typecheck:tests": "tsc --build test",
+    "typecheck": "npm run typecheck:source && npm run typecheck:tests",
+    "lint:source": "eslint src/**",
+    "lint:tests": "eslint test/**",
+    "lint": "npm run lint:source && npm run lint:tests",
+    "lint:source-fix": "eslint --fix src/**",
+    "lint:tests-fix": "eslint --fix test/**",
+    "lint:fix": "npm run lint:source-fix && npm run lint:tests-fix",
+    "build:declarations": "tsc --build src",
+    "clean:lib": "rimraf lib",
+    "ready": "npm run lint && npm run typecheck && npm run build:declarations",
+    "release": "np"
+  },
+  "repository": {
+    "url": "https://github.com/RWalkling/utility-types"
+  },
+  "author": "Raphael Walkling",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^12.7.2",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "np": "^5.0.3"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig-base",
+  "compilerOptions": {
+    "noEmit": true,
+    "rootDir": "."
+  },
+  "references": [{
+    "path": "./tsconfig-src.json"
+  }],
+  "files": [
+    "MutuallyExclusive.test.ts"
+  ]
+}
