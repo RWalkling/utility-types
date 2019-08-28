@@ -11,7 +11,7 @@ type MutuallyExclusive<Keys extends PropertyKey,
     Free,
     Groups extends TupleOf<[PropertyKey, unknown]>,
     > = Partial<Record<Keys, unknown>> & Free & UnionToIntersection<{
-    [Index in keyof Groups]?: MutuallyExclusiveGroup<AtKey<Groups[Index], 1>,
+    [Index in keyof Groups]: MutuallyExclusiveGroup<AtKey<Groups[Index], 1>,
         Keys,
         AsType<AtKey<Groups[Index], 0>, PropertyKey>>
 }[number]>;
