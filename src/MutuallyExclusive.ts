@@ -1,4 +1,5 @@
-import { AsType, AtKey, TupleOf, UnionToIntersection } from './simple';
+import { AsType, AtKey, UnionToIntersection } from './simple';
+import { TupleOf } from './tuples';
 
 type IsNever<T> = [T] extends [never] ? unknown : never;
 

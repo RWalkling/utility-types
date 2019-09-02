@@ -1,11 +1,12 @@
-import { Primitives, TupleOf } from './simple';
+import { Primitives } from './simple';
+import { TupleOf } from './tuples';
 
 interface RecursiveArray<T> {
-    [K: number]: T | RecursiveArray<T> | RecursiveObject<T>;
+    [K: number]: Recursive<T>;
 }
 
 interface RecursiveObject<T> {
-    [K: string]: T | RecursiveArray<T> | RecursiveObject<T>;
+    [K: string]: Recursive<T>;
 }
 
 export type Recursive<T> = T | RecursiveArray<T> | RecursiveObject<T>;

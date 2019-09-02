@@ -3,10 +3,5 @@
   "compilerOptions": {
     "rootDir": "."
   },
-  "files": [
-    "index.ts",
-    "MutuallyExclusive.ts",
-    "recursive.ts",
-    "simple.ts"
-  ]
+  "include": ["**/*.ts"]
 }
