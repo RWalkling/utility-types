@@ -7,11 +7,7 @@ type Reverse_<Tuple extends AnyTuple, MirrorTuple extends AnyTuple> = Tuple exte
     : Recurse<Reverse_<Shift<Tuple>, Unshift<MirrorTuple, Tuple[0]>>>;
 export type Reverse<Tuple extends AnyTuple> = Flatten<Reverse_<Tuple, readonly []>>;
 
-type Concat_<
-    TupleA extends AnyTuple,
-    TupleB extends AnyTuple,
-    CounterTuple extends AnyTuple,
-    > = CounterTuple extends readonly []
+type Concat_<TupleA extends AnyTuple, TupleB extends AnyTuple, CounterTuple extends AnyTuple> = CounterTuple extends readonly []
     ? Unshift<TupleB, TupleA[0]>
     : Recurse<Concat_<TupleA, Unshift<TupleB, TupleA[CounterTuple['length']]>, Shift<CounterTuple>>>;
 export type Concat<TupleA extends AnyTuple, TupleB extends AnyTuple> = Flatten<Concat_<TupleA, TupleB, Shift<TupleA>>>;
@@ -34,5 +30,5 @@ type Range_<Start extends number, End extends number, CounterTuple extends AnyTu
     ;
 
 export type Range<Start extends number = 0, End extends number = never> = [End] extends [never]
-    ? Flatten<Range_<0, Start, [], [], false>>
-    : Flatten<Range_<Start, End, [], [], false>>;
+    ? Flatten<Range_<0, Start, readonly [], readonly [], false>>
+    : Flatten<Range_<Start, End, readonly [], readonly [], false>>;

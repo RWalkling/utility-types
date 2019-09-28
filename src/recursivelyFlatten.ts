@@ -1,7 +1,7 @@
 const recursionKey = Symbol();
 
 export interface Recurse<T> {
-    [recursionKey]: T;
+    readonly [recursionKey]: T;
 }
 
 type Recursive<T> = T | Recurse<Recursive<T>>;

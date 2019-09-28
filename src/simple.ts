@@ -1,7 +1,5 @@
-import { AnyFunc } from './functions';
-
 export type Primitives = string | number | symbol | boolean | object | undefined | bigint;
-export type Basic = Primitives | null | void | AnyFunc;
+export type Basic = Primitives | null | void | ((...args: never[]) => void);
 export type ValuesOf<T> = T[keyof T];
 export type Guard<T> = (obj: any) => obj is T;
 export type AtKey<T, Key, Default = never> = Key extends keyof T ? T[Key] : Default;
