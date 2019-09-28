@@ -23,8 +23,18 @@ export {
     Unshift,
     Zip,
     AsTuple,
-    AtLastIndex,
+    Last,
 } from './tuples';
+export {
+    AnyTuple as AnyTupleR,
+    TupleOf as TupleOfR,
+    Shift as ShiftR,
+    SameLength as SameLengthR,
+    Unshift as UnshiftR,
+    Zip as ZipR,
+    AsTuple as AsTupleR,
+    Last as LastR,
+} from './readonlyTuples';
 export {
     MatchFunction,
     MaybeFunction,

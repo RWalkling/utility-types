@@ -36,7 +36,6 @@ type ExpectExpectedType<T extends {
     f?: () => 55;
 }> = T;
 
-
 type ShouldBeSubtypeOf = ExpectExpectedType<ActualType>;
 type ShouldBeSupertypeOf = ExpectActualType<{
     a: 'a str';

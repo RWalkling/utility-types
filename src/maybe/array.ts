@@ -1,4 +1,4 @@
-import { AnyTuple, TupleOf } from '../tuples';
+import { AnyTuple, TupleOf } from '../readonlyTuples';
 
 export type MaybeArray<T> = T | TupleOf<T>;
 

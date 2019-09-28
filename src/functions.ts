@@ -1,4 +1,4 @@
-import { AnyTuple, TupleOf } from './tuples';
+import { AnyTuple, TupleOf } from './readonlyTuples';
 
 export type AnyParams = TupleOf<never>;
 export type AnyReturn = void;

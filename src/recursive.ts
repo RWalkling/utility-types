@@ -1,5 +1,7 @@
 import { Primitives } from './simple';
-import { TupleOf } from './tuples';
+import { TupleOf } from './readonlyTuples';
+
+// may not be up-to-date
 
 interface RecursiveArray<T> {
     [K: number]: Recursive<T>;

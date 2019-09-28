@@ -1,5 +1,5 @@
 import { AnyFunc, FuncOf } from '../functions';
-import { AnyTuple } from '../tuples';
+import { AnyTuple } from '../readonlyTuples';
 
 export type MaybePromise<T> = T | Promise<T>;
 export type UnpackedPromise<T> = T extends Promise<infer R> ? R : T;
