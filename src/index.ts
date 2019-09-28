@@ -35,6 +35,7 @@ export {
     AsTuple as AsTupleR,
     Last as LastR,
 } from './readonlyTuples';
+export { Recurse, Flatten } from './recursivelyFlatten';
 export {
     MatchFunction,
     MaybeFunction,
